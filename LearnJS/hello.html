@@ -1,0 +1,23 @@
+
+<html>
+<head>
+   
+    <title>Hello</title>
+
+    <script>
+        function hello() {
+            if (document.querySelector('h1').innerHTML==='Hello!') {
+                document.querySelector('h1').innerHTML='Goodbye!';
+            } else {
+              
+                document.querySelector('h1').innerHTML='Hello!'
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>HELLO!</h1>
+    <button onclick="hello()">Click here</button>
+</body>
+</html>

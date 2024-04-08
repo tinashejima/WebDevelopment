@@ -7,10 +7,39 @@ body{
     margin: 0 10vw 20px 10vw;
     width: 80%;
     height: 100%;
-    display: none;
-    
-    
 
+    
+} 
+#home:hover{
+text-underline-position: below;   
+            color: tan;
+}
+
+
+#allVenues:hover{text-underline-position: below;   
+            color: tan;
+}
+
+ #login:hover { text-underline-position: below;   
+    color: tan;
+}
+
+ #Register:hover { text-underline-position: below;   
+    color: tan;
+}
+  #contactUs:hover
+          { text-underline-position: below;   
+            color: tan;
+}
+#allVenues:hover
+{ 
+  color: tan;
+}
+
+#aboutProject:hover
+          {   
+            color: tan;
+            
 }
 
 .d1{
@@ -20,6 +49,7 @@ body{
     
     
     border-bottom: 3px solid white;
+    
 
     
 }
@@ -54,6 +84,7 @@ h1{
     height: 350px;
     border: rgb(165, 87, 18) 7px solid;
    
+   
 
 }
 .mainImages img{
@@ -63,6 +94,7 @@ h1{
 }
 .images{
     background-color: white;
+    
 
    
     
@@ -140,4 +172,13 @@ h1{
 }
 .imgContent{
     background-color: white;
+}
+
+#aboutProjectDiv{
+    padding: 20px;
+    background-color: white;
+    width: 96,2%;
+    height: 250px;
+    display: none;
+
 }

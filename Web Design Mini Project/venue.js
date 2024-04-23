@@ -1,19 +1,19 @@
-//document.addEventListener('DOMContentLoaded', function(){
 
-    //document.querySelector('#aboutProject', function dsplay(){
+function ShowPage(page) {
+    document.querySelectorAll('div', function(){
 
-        //if (document.querySelector('#aboutProject').innerHTML==='none') {
-        //    document.querySelector('#aboutProject').innerHTML='show';
+        p1.style.display ='none';
+    })
+    document.querySelector(`#${page}`).style.display = 'block';
 
-        //} else {
+}
 
-           // document.querySelector('#aboutProject').innerHTML='show!'
-//}
-        
-         // Step 2: Add an event listener to the link
-         document.getElementById('aboutProject').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-        // Step 3: Toggle the visibility of the hidden div
-        var aboutProjectDiv = document.getElementById('aboutProjectDiv');
-        aboutProjectDiv.style.display = (aboutProjectDiv.style.display === 'none') ? 'block' : 'none';
+document.addEventListener('DOMContentLoaded', function(){
+
+    document.querySelectorAll('a').forEach(a => {
+        a.onclick = function(){
+            ShowPage(this.dataset.page);
+        }
     });
+});
+

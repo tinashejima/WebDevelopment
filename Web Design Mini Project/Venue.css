@@ -7,6 +7,7 @@ body{
     margin: 0 10vw 20px 10vw;
     width: 80%;
     height: 100%;
+    
 
     
 } 
@@ -36,9 +37,10 @@ text-underline-position: below;
   color: tan;
 }
 
-#aboutProject:hover
-          {   
+a:hover
+          { text-underline-position: below;  
             color: tan;
+            cursor: pointer;
             
 }
 
@@ -49,6 +51,7 @@ text-underline-position: below;
     
     
     border-bottom: 3px solid white;
+    
     
 
     
@@ -80,11 +83,16 @@ h1{
     
 }
 
+    
+
+
 .mainImages{
     height: 350px;
     border: rgb(165, 87, 18) 7px solid;
    
    
+
+
 
 }
 .mainImages img{
@@ -148,14 +156,7 @@ h1{
 .imgFooter{
     text-align: right;
 }
-/* .notActive{ */
-    /* display: none; */
-}
-/* .imgDetails{
-    height: 200px;
-    background-color: white;
 
-} */
 
 .imgDetails .topBanner{
     background-color: rgb(219, 215, 215);
@@ -174,11 +175,33 @@ h1{
     background-color: white;
 }
 
-#aboutProjectDiv{
+#p1{
     padding: 20px;
     background-color: white;
     width: 96,2%;
     height: 250px;
-    display: none;
 
+    
+}
+#p2{
+    padding: 20px;
+    background-color: white;
+    width: 96,2%;
+    height: 300px;
+}
+.hr3{
+    margin: 1px;
+    border: rgb(199, 189, 189) 0.1px solid;
+    margin-bottom: 1px;
+
+}
+#greybar{
+    padding: 20px;
+    background-color:rgb(240, 236, 236);
+    width: 96,2%;
+    height: 3px;
+}
+    
+#alert{
+    color: red;
 }

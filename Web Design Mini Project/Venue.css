@@ -205,3 +205,53 @@ h1{
 #alert{
     color: red;
 }
+
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .login-form input[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color:  rgb(165, 87, 18);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  
+  .reset {
+    width: 50%;
+    padding: 10px;
+    background-color:  rgb(0, 0, 0);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+  .login-form input[type="submit"]:hover {
+    background-color:  rgb(243, 132, 35);
+  }
+  .reset:hover {
+    background-color:  rgb(243, 132, 35);
+  }

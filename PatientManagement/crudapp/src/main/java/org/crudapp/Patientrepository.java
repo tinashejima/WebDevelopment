@@ -1,14 +1,12 @@
 package org.crudapp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface patientrepository {
-
-    // PatientRepository.java
-    public interface apprepository extends JpaRepository<userandpatientmodels.Patient, Long> {
-        List<userandpatientmodels.Patient> findByUserId(Long userId);
-    }
-
+@Repository
+public interface Patientrepository extends JpaRepository<Userandpatientmodels.Patient, Long> {
+    List<Userandpatientmodels.Patient> findByUserId(Long userId);
 }
+

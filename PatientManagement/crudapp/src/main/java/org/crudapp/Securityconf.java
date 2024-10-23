@@ -10,27 +10,27 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-public class securityconf {
+public class Securityconf {
     @Configuration
     @EnableWebSecurity
     public class SecurityConfig {
         @Autowired
         private UserDetailsService userDetailsService;
 
-        @Override
+
         protected void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/api/**").authenticated()
+                    .requestMatchers("/api/**").authenticated()
                     .anyRequest().permitAll()
                     .and()
-                    .formLogin()
-                    .loginPage("/login")
+                    .formLogin(login -> login
+                            .loginPage("/login")
                     .defaultSuccessUrl("/")
-                    .failureUrl("/login?error=true");
+                    .failureUrl("/login?error=true"));
         }
 
-        @Override
+
         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
             auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
         }

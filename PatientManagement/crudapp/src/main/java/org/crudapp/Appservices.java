@@ -5,33 +5,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-public class appservices {
+public class Appservices {
 
 
-    // AppService.java
-    @Repository
-    public class AppService {
-        @Autowired
-        private apprepository.apprepository apprepository;
-
-        public User registerUser(User user) {
-            return org.crudapp.apprepository.save(user);
-        }
-
-        public boolean validateCredentials(String username, String password) {
-            User user = apprepository.findByUsername(username);
-            return user != null && user.getPassword().equals(password);
-        }
+    public User registerUser(User user) {
+        return user;
     }
 
 
-    // PatientService.java
-    @Repository
-    public class PatientService {
+    @Service
+    public class AppService {
         @Autowired
-        private patientrepository.patientrepository patientrepository;
+        private Apprepository apprepository;
 
-        public userandpatientmodels.Patient registerPatient(userandpatientmodels.Patient patient) {
+        public User registerUser(User user) {
+            return apprepository.save(user);
+        }
+
+//        public boolean validateCredentials(String username, String password) {
+//            User user = apprepository.findByUsername(username);
+//            return user.getPassword().equals(password);
+//        }
+    }
+
+
+
+     @Service
+     public class PatientService {
+         @Autowired
+         private Patientrepository patientrepository;
+
+         public Userandpatientmodels.Patient registerPatient(Userandpatientmodels.Patient patient) {
             return patientrepository.save(patient);
         }
 

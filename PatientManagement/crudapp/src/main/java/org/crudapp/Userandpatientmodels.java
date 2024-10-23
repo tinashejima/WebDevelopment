@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-public class userandpatientmodels {
+public class Userandpatientmodels {
 
     // User.java
     @Entity
@@ -30,7 +30,6 @@ public class userandpatientmodels {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
-
         private String firstName;
         private String lastName;
         private Date birthDate;
